@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../../assets/formula-1-logo-7.png" alt="" width="130" height="32.5"
+                class="d-inline-block align-text-top">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Gallery</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="/contact" id="navbarDropdown" role="button">
+                        About Us
+                    </a>
+
+                </li>
+            </ul>
+
+            <div *ngIf="!authenticated">
+                <button class="btn btn-outline-success" (click)="openDialog()">Login</button>
+            </div>
+            <div class="text-center" *ngIf="authenticated">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <mat-card-title class="mat-card-header-text" style="color: white;">
+                            {{userName}}
+                        </mat-card-title>
+
+                    </div>
+                    <div class="col-sm-2" style="padding-left: 0px;">
+
+                        <button class="example-header-image" [matMenuTriggerFor]="menu" mat-card-avatar></button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item disabled>
+                                <mat-icon>settings</mat-icon>
+                                <span>Settings</span>
+                            </button>
+                            <button mat-menu-item (click)="logout()">
+                                <mat-icon>logout</mat-icon>
+                                <span>Logout</span>
+                            </button>
+                        </mat-menu>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</nav>

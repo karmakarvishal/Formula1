@@ -1,0 +1,194 @@
+<app-header></app-header>
+
+<mat-card style="display: none;" class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+</mat-card>
+<div class="container listing-header">
+    <fieldset class="f1-border--top-right f1-border-color--carbonBlack">
+        <div class="row">
+            <div class="col-12 col-xl-8">
+                <h1 class="f1-black--xxl no-margin">F1 Schedule 2021</h1>
+                <p class="f1--xs  f1-uppercase" style="padding-top: 10px;">2021 FIA FORMULA ONE WORLD CHAMPIONSHIP™
+                    RACE CALENDAR</p>
+            </div>
+            <div class="col-12 col-xl-4 cta-cotainer f1-uppercase text--micro">
+                <div class="cta-wrapper idle duringseason">
+
+                    <div class="cta durringSeasonCTA">
+                        <div class="cta-icon">
+                            <span class="icon icon-down-chevron"><span class="path1"></span><span
+                                    class="path2"></span><span class="path3"></span></span>
+                        </div>
+                        <div class="cta-text-container">
+                            <p class="no-margin misc--tag f1-color--warmRed"><span
+                                    class="round-pretext">Next-</span><span class="cta-next-round">ROUND 8</span></p>
+                            <p class="no-margin"><span class="cta-race-name f1-bold--s">Austria </span> <span
+                                    class="cta-race-year f1-year--s">2021</span></p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </fieldset>
+
+
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let item of completedArrEvents;let i = index">
+            <fieldset class="event-item" style="max-width: 300px;">
+                <legend class="card-title f1-uppercase f1-color--warmRed">ROUND {{i+1}}<span
+                        class="race-status d-none"></span>
+                </legend>
+                <div class="container">
+                    <div class="row">
+                        <div class="race-card completed">
+                            <mat-card class="example-card">
+
+                                <div class="row" style="width: 100%;">
+                                    <div class="event-space-time">
+                                        <div class="date-month f1-uppercase f1-wide--s">
+                                            <p class="no-margin">
+                                                <span class="start-date">{{item.startDate}}</span>-<span
+                                                    class="end-date">{{item.endDate}}</span>
+                                            </p>
+
+                                        </div>
+                                        <div class="country-flag">
+
+
+                                            <picture>
+
+
+
+
+
+
+                                                <img [data-src]="item.venueFlag" class="lazy loaded"
+                                                    [src]="item.venueFlag" data-was-processed="true">
+                                            </picture>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="event-completed">
+                                        <span class="month-wrapper f1-wide--xxs f1-uppercase">{{item.month}}</span>
+                                        <span class="finish-wrapper f1-bg--black" *ngIf="item.raceDone">
+                                            <img src="https://www.formula1.com/etc/designs/fom-website/images/flag-asset.png"
+                                                class="lazy loading" data-was-processed="true">
+                                        </span>
+                                    </div>
+                                </div>
+                                <br>
+                                <mat-divider></mat-divider>
+                                <mat-card-content>
+                                    <div class="event-description">
+                                        <div class="event-place d-block">{{item.raceVenue}} <mat-icon>chevron_right
+                                            </mat-icon>
+
+                                        </div>
+
+                                        <div class="event-title f1--xxs"
+                                            title="Formula 1 Gulf Air Bahrain Grand Prix 2021">
+                                            {{item.venueDesc}}</div>
+
+                                    </div>
+                                    <mat-divider></mat-divider>
+                                    <br>
+                                    <div class="event-result" *ngIf="item.raceDone">
+                                        <div class="result-card position-1">
+                                            <div class="image-wrapper">
+
+
+                                                <picture>
+
+                                                    <img [data-src]="item.firstPosImg" class="lazy loaded"
+                                                        [src]="item.firstPosImg" data-was-processed="true">
+                                                </picture>
+
+
+
+                                            </div>
+                                            <div class="driver-info-wrapper">
+                                                <div class="driver-info">
+                                                    <i class="icon icon-slash-1" style="color:#00d2be"></i>
+                                                    <span
+                                                        class="f1-bold--xs f1-uppercase">{{item.firstPosDriverName}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="result-card position-2">
+                                            <div class="image-wrapper">
+
+
+                                                <picture>
+
+                                                    <img [data-src]="item.secondPosImg" class="lazy loaded"
+                                                        [src]="item.secondPosImg" data-was-processed="true">
+                                                </picture>
+
+
+
+                                            </div>
+                                            <div class="driver-info-wrapper">
+                                                <div class="driver-info">
+                                                    <i class="icon icon-slash-2" style="color:#0600ef"></i>
+                                                    <span
+                                                        class="f1-bold--xs f1-uppercase">{{item.secondPosDriverName}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="result-card position-3">
+                                            <div class="image-wrapper">
+
+
+                                                <picture>
+
+
+                                                    <img [data-src]="item.thirdPosImg" class="lazy loaded"
+                                                        [src]="item.thirdPosImg" data-was-processed="true">
+                                                </picture>
+
+
+
+                                            </div>
+                                            <div class="driver-info-wrapper">
+                                                <div class="driver-info">
+                                                    <i class="icon icon-slash-3" style="color:#00d2be"></i>
+                                                    <span
+                                                        class="f1-bold--xs f1-uppercase">{{item.thirdPosDriverName}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-image" *ngIf="!item.raceDone">
+                                        <picture class="track">
+                                            <img class="lazy loaded" [src]="item.trackImg" data-was-processed="true">
+                                        </picture>
+                                    </div>
+                                </mat-card-content>
+
+
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+    </div>
+    <br>
+
+</div>
