@@ -1,0 +1,143 @@
+.driver-details {
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile {
+  padding: 0 1px 0 0;
+  width: 50%;
+}
+
+.stats,
+.profile {
+  float: left;
+  min-height: 20px;
+  width: 50%;
+}
+
+.driver-title {
+  background: #fff;
+  overflow: hidden;
+}
+
+fieldset,
+figure {
+  margin: 0;
+}
+
+.driver-image-crop {
+  height: 452px;
+  overflow: hidden;
+}
+
+.driver-image-crop-outer {
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.driver-image-crop-inner {
+  position: relative;
+}
+
+.driver-title .driver-image-crop-inner img {
+  position: relative;
+  left: 4%;
+  width: 720px;
+  //margin-left: -360px;
+}
+
+// img,
+// svg {
+//   display: block;
+//   width: 100%;
+//   height: auto;
+// }
+
+.driver-title .driver-details {
+  padding: 35px 40px;
+}
+
+.driver-details {
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.driver-title .driver-number {
+  color: gray;
+  letter-spacing: -1px;
+  margin: 0 0 15px;
+  font-weight: 500;
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 1.142;
+}
+
+.driver-title .icn-flag {
+  display: inline-block;
+  height: 32px;
+  margin: 0 0 0 5px;
+  position: relative;
+  top: -2px;
+  width: 48px;
+}
+
+.driver-title .driver-name {
+  font-weight: 700;
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 1.142;
+  margin: 0;
+  padding: 0;
+}
+
+.stats,
+.profile {
+  float: left;
+  min-height: 20px;
+  width: 50%;
+}
+
+.stats-list-component {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.stats-list-component .extra-info {
+  overflow: hidden;
+  padding: 0;
+}
+
+.stats-list-component .brand-logo {
+  float: left;
+  height: 130px;
+  padding: 0 10px 0 0;
+  width: 26%;
+}
+
+img,
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stats-list-component .stat-list {
+
+  margin: 20px 0 0;
+  width: 100%;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.stats-list-component .stat-key {
+  padding: 4px 0 4px 10px;
+  text-align: left;
+  width: 50%;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.222;
+}
